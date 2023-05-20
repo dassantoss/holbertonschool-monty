@@ -11,50 +11,48 @@
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
- * 
  * Description: Doubly linked list node structure
  * for stack, queue, LIFO, FIFO.
 */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+int n;
+struct stack_s *prev;
+struct stack_s *next;
 } stack_t;
 
 /**
- * struct globals - global structure for to use in functions
+ * struct globals - globals structure for to use in functions
  * @lifo: is stack or queue
  * @line: current line
  * @arg: second parameter inside the current line
  * @head: doubly linked list
  * @file_desc: files description
  * @buffer: input text
- * 
  * Description: Doubly linked list node structure
- * for stack, queue, LIFO, FIFO 
+ * for stack, queue, LIFO, FIFO
 */
-typedef struct global
+typedef struct globals
 {
-        int lifo;
-        unsigned int line;
-        char *arg;
-        stack_t *head; 
-        FILE *file_desc;
-        char *buffer;       
+int lifo;
+unsigned int line;
+char *arg;
+stack_t *head;
+FILE *file_desc;
+char *buffer;
 } global_t;
 
 /**
  * struct instruction_s - opcode and its function
+ * @opcode: opcode
  * @f: function to handle the opcode
- * 
  * Description: opcode and its function
  * for stack, queue, LIFO, FIFO.
 */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+char *opcode;
+void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 extern global_t global_vars;

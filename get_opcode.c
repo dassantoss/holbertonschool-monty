@@ -1,10 +1,8 @@
 #include "monty.h"
 
 /**
- * get_opcodes - selects the opecode to perfom
- * 
+ * get_opcode - selects the opecode to perfom
  * @opcode: opcode sent
- * 
  * Return: Pointer to the function that executes the opcode
 */
 
@@ -13,7 +11,7 @@ void (*get_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 	instruction_t instruct[] = {
 		{"push", push},
 		{"pall", pall},
-		{NULL,NULL}
+		{NULL, NULL}
 	};
 
 	int i;
@@ -24,5 +22,5 @@ void (*get_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 			break;
 	}
 
-	return (instruct[i].f);	
+	return (instruct[i].f);
 }

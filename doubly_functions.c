@@ -3,12 +3,10 @@
 /**
  * free_doubly_linked_list - Frees a doubly linked list.
  * @head: Pointer to the head to the list
- * 
  * Description: This function frees the memory allocated
- * 	for a doubly linked list.
- * 	Its starts from the head of the list and iteratively 
- * 	frees each node.
- * 
+ * for a doubly linked list.
+ * Its starts from the head of the list and iteratively
+ * frees each node.
  * Return: void
 */
 void free_doubly_linked_list(stack_t *head)
@@ -18,7 +16,7 @@ void free_doubly_linked_list(stack_t *head)
 	current = head;
 	while (current != NULL)
 	{
-        next = current->next;
+		next = current->next;
 		free(current);
 		current = next;
 	}
