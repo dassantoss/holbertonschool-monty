@@ -7,9 +7,11 @@
 */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	if (stack == NULL)
+	(void)line_number;
+
+	if (*stack == NULL)
 	{
-		dprintf("L%u: can't pint, stack empty\n", line_number);
+		dprintf(2, "L%u: can't pint, stack empty\n", line_number);
 		free_global_vars();
 		exit(EXIT_FAILURE);
 	}

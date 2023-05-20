@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 	nlines = getline(&global_vars.buffer, &size, file_desc);
 	while (nlines != -1)
 	{
-		lines[0] = _strtoky(global_vars.buffer, " t\n");
+		lines[0] = _strtoky(global_vars.buffer, " \t\n");
 		if (lines[0] && lines[0][0] != '#')
 		{
 			f = get_opcode(lines[0]);
