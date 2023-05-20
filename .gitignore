@@ -1,0 +1,14 @@
+# Ignorar archivo de configuración local
+config.ini
+
+# Ignorar carpeta de vscode
+.vscode/
+
+# Ignorar todos los archivos de registro
+*.log
+
+# Ignorar el ejecutable
+monty
+
+# Ignora
+monty
