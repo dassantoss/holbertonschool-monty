@@ -34,7 +34,7 @@ typedef struct stack_s
  * Description: Doubly linked list node structure
  * for stack, queue, LIFO, FIFO 
 */
-typedef struct global_vars
+typedef struct global
 {
         int lifo;
         unsigned int line;
