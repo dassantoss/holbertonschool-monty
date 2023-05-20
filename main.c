@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 			if (!f)
 			{
 				dprintf(2, "L%u: ", global_vars.line);
-				dprintf(2, "unknow instruction %s\n", lines[0]);
+				dprintf(2, "unknown instruction %s\n", lines[0]);
 				free_global_vars();
 				exit(EXIT_FAILURE);
 			}
