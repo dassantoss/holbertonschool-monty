@@ -5,7 +5,6 @@
  * @opcode: opcode sent
  * Return: Pointer to the function that executes the opcode
 */
-
 void (*get_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t instruct[] = {
@@ -19,6 +18,7 @@ void (*get_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"sub", sub},
 		{"div", _div},
 		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
