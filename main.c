@@ -56,6 +56,22 @@ FILE *check_input(int argc, char *argv[])
 }
 
 /**
+ * is_comment - Checks if a line is a comment.
+ * @line: The line to check.
+ * Return: 1 if the line is a comment, 0 otherwise.
+ */
+int is_comment(char *line)
+{
+	while (*line == ' ')
+		line++;
+
+	if (*line == '#')
+		return (1);
+
+	return (0);
+}
+
+/**
  * main - ENtry point
  * @argc: Argument count
  * @argv: Argument vector
@@ -74,8 +90,16 @@ int main(int argc, char *argv[])
 	nlines = getline(&global_vars.buffer, &size, file_desc);
 	while (nlines != -1)
 	{
+		/* Skip the line if it is a comment */
+		if (is_comment(global_vars.buffer))
+		{
+			nlines = getline(&global_vars.buffer, &size, file_desc);
+			global_vars.line++;
+			continue;
+		}
+
 		lines[0] = _strtoky(global_vars.buffer, " \t\n");
-		if (lines[0] && lines[0][0] != '#')
+		if (lines[0])
 		{
 			f = get_opcode(lines[0]);
 			if (!f)

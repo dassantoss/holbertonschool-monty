@@ -86,4 +86,7 @@ stack_t *add_node_at_beginning(stack_t **head, const int n);
 /*main*/
 void free_global_vars(void);
 
+/* ...otras declaraciones de funciones y estructuras... */
+int is_comment(char *line);
+
 #endif
