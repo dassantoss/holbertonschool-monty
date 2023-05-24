@@ -109,4 +109,4 @@ L3: unknown instruction pcx
 When there is no errors, `monty` returns `0`. Otherwise, returns `1`
 
 ## Authors
-* Jorge Zafra: [Twitter](https://twitter.com/da_ssantoss) - [GitHub](https://github.com/dassantoss)
+* Santiago Echeverri: [Twitter](https://twitter.com/da_ssantoss) - [GitHub](https://github.com/dassantoss)
